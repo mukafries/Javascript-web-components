@@ -1,0 +1,105 @@
+*,*::after, *::before{
+  box-sizing: border-box;
+}
+
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header{
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  z-index: 999;
+  transition: all .5s;
+}
+
+.hide-preloader{
+  z-index: -999;
+  visibility: hidden;
+}
+
+.video-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+h1{
+  z-index: 20;
+  color: white;
+}
+
+.switch-btn{
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  width: 7rem;
+  height: 2rem;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  transition: all .5s;
+  background-color: rgb(14, 63, 82);
+
+  z-index: 20;
+}
+
+.switch-btn span{
+  display: inline-block;
+  font-size: .85rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: white;
+}
+
+.switch{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0;
+  display: block;
+  transition: all .5s;
+}
+
+.slide .switch{
+  left: 50%;
+}
+
+header::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}

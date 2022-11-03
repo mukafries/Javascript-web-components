@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <!-- preloader -->
+    <div class="preloader">
+      <img src="preloaders/preloader.gif" alt="" srcset="">
+    </div>
+
+    <!-- header -->
+    <header>
+        <video class="video-container" muted autoplay loop>
+          <source src="./videos/video2.mp4" type="video/mp4">
+          browser does not support video
+        </video>
+      <h1>
+        Video Project
+      </h1>
+
+      <!-- video switch -->
+      <button class="switch-btn">
+        <span>
+          play
+        </span>
+        <span>
+          pause
+        </span>
+        <span class="switch"></span>
+        </span>
+      </button>
+    </header>
+    <section>
+      <!-- header end -->
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
