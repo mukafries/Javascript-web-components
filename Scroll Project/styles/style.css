@@ -15,6 +15,9 @@ html {
   --font-size-xxxl: 2.25rem;
 
   font-family: sans-serif;
+
+  scroll-behavior: smooth;
+  transition: all 1s;
 }
 
 body {
@@ -69,7 +72,7 @@ header {
 }
 .logo-container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 }
 #logo img {
@@ -78,7 +81,31 @@ header {
 }
 
 .navbar {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+
+  transition: all .5s;
+}
+
+.header-fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background-color: rgba(255, 255, 255, 0.869);
+}
+
+.header-fixed .nav-link{
+  color: black;
+}
+
+.navbar-show{
+  height: auto;
   visibility: visible;
+  
+  /* transition: all 3s; */
 }
 
 .nav-list {
@@ -90,7 +117,7 @@ header {
   padding: 15px 10px;
   margin-bottom: 10px;
 
-  transition: all 0.5s;
+  transition: all .5s;
 }
 
 .nav-item:hover {
@@ -136,16 +163,26 @@ h1 {
   font-size: var(--font-size-base);
   color: white;
   text-align: justify;
+  max-width: 600px;
+
 }
 
 .hero-btn {
+  padding: 1em 1.5em;
   align-self: flex-start;
   background-color: transparent;
+  transition: all 1s;
+}
+
+.hero-btn:hover{
+  background-color: white;
+  color: green;
+  transform: scale(1.2);
 }
 
 /* about section styling */
 .about-section {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(125deg, rgb(1, 32, 55) 40%, green);
   background-blend-mode: multiply;
   color: white;
@@ -290,7 +327,16 @@ footer{
   bottom: 10px;
   right: 10px;
   z-index: 1000;
+
+  visibility: hidden;
 }
+
+.back-to-top-show{
+  visibility: visible;
+  
+}
+
+
 .back-to-top a{
   text-decoration: none;
   color: white;
@@ -310,6 +356,13 @@ footer{
     justify-content: space-between;
     align-items: center;
   }
+
+  .header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .logo-container .nav-button{
     display: none;
   }
@@ -351,6 +404,10 @@ footer{
 
   .hero-section .flex-column{
     align-items: center;
+  }
+
+  .hero-details{
+    text-align: center;
   }
   .hero-btn{
     align-self: center;

@@ -8,21 +8,24 @@
     <link rel="stylesheet" href="./styles/style.css">
   </head>
   <body>
-    <button type="button" class="back-to-top">
-      <a href="#Home">Top</a>
-    </button>
-    <header>
-      <div class="header container">
+    
+    <a href="#Home" id="back-to-top" class="back-to-top">
+      <button type="button">
+        Top
+      </button>
+    </a>
+    <header class="header">
+      <div class="container">
         <div class="logo-container">
           <a href="#Home" id="logo" class="logo">
             <img src="images/logo2.png" alt="Adeyemi Blessing" />
           </a>
-          <button type="menu" class="nav-button">Show</button>
+          <button id="nav-button" type="button" class="nav-button">Show</button>
         </div>
 
 
-        <nav class="navbar">
-          <ul class="nav-list">
+        <nav id="nav-bar" class="navbar">
+          <ul id ="nav-list" class="nav-list">
             <li class="nav-item"><a href="#Home" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="#About" class="nav-link">About</a></li>
             <li class="nav-item">
@@ -35,6 +38,7 @@
       
     </header>
 
+
     <main>
       <!-- Start of Hero Section -->
       <section id="Home" class="hero-section">
@@ -42,6 +46,7 @@
           <h1>Scroll Project</h1>
           <p class="hero-details">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nihil
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, odio?
           </p>
           <button class="btn hero-btn">Explore Tours</button>
         </div>
@@ -180,9 +185,11 @@
       <div class="container">
         <p class="copyright">
           Copyright &copy Backroad Travel and Tours Company
-          <span class="date">20##</span>. All Rights Reserved
+          <span id="date" class="date"></span>. All Rights Reserved
         </p>
       </div>
     </footer>
+
+    <script src="scripts/app.js"></script>
   </body>
 </html>
