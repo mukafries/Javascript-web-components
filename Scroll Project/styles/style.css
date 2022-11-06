@@ -202,9 +202,9 @@ h2 {
 /* End of about section */
 
 .services-section {
-  /* background-color: rgba(0, 0, 0, .8);
-  background-image: linear-gradient(125deg,rgb(1, 32, 55) 40%, green);
-  background-blend-mode: multiply; */
+  background-color: rgba(0, 0, 0, 0.074);
+  background-image: linear-gradient(125deg,rgb(1, 17, 30) 40%, green);
+  background-blend-mode: multiply;
 }
 
 .services {
