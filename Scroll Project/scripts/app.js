@@ -21,7 +21,7 @@ navButton.addEventListener("click", () => {
 
 window.addEventListener("resize", () =>{
   if (window.innerWidth > 800 && !navBar.classList.contains("navbar-show")) {
-    navBar.classList.toggle("navbar-show");
+    navBar.classList.add("navbar-show");
   }
 });
 
@@ -53,3 +53,36 @@ window.addEventListener('scroll', () => {
 
 // Smooth scroll
 // select links
+const scrollLinks = document.querySelectorAll(".nav-link");
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", function (e){
+    // Prevent default
+    e.preventDefault();
+
+    // navigate to specific spot
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    console.log(id);
+
+    const element = document.getElementById(id);
+
+     // closes the navbar before scrolling action
+     navBar.classList.remove("navbar-show");
+
+    // calculate the heights
+    const headerHeight = header.getBoundingClientRect().height;
+
+    let position = element.offsetTop - headerHeight;
+
+    //boolean foe id header is fixed because height will be different either ways
+    const isHeaderFIxed = header.classList.contains("header-fixed");
+    
+    if(!isHeaderFIxed){
+      position = position - headerHeight;
+    }
+
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+  });
+});

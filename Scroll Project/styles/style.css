@@ -152,6 +152,7 @@ header {
 .hero-section .flex-column {
   gap: 15px;
 }
+
 h1 {
   text-transform: uppercase;
   color: white;
@@ -203,7 +204,7 @@ h2 {
 
 .services-section {
   background-color: rgba(0, 0, 0, 0.074);
-  background-image: linear-gradient(125deg,rgb(1, 17, 30) 40%, green);
+  background-image: linear-gradient(300deg,rgb(1, 17, 30) 40%, green);
   background-blend-mode: multiply;
 }
 
