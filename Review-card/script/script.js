@@ -22,7 +22,7 @@ randomBtn.addEventListener('click', surprise);
 
 // load initial iten
 window.addEventListener('DOMContentLoaded', function(){
-  console.log("Shake abd bake");
+  console.log("Shake and bake");
   loadComment(currentItem);
 
 });

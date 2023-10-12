@@ -66,7 +66,7 @@ scrollLinks.forEach((link) => {
     const element = document.getElementById(id);
 
      // closes the navbar before scrolling action
-     navBar.classList.remove("navbar-show");
+    //  navBar.classList.remove("navbar-show");
 
     // calculate the heights
     const headerHeight = header.getBoundingClientRect().height;
